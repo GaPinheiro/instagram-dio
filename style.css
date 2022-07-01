@@ -1,4 +1,4 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -19,16 +19,16 @@ body {
 
 .instagram-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: start;
+    align-items: center; /*vertical*/
+    justify-content: start; /*horizontal*/
     width: 60%;
     height: 100vh;
 }
 
 .instagram-phone {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /*vertical*/
+    justify-content: center; /*horizontal*/
     width: 50%;
 }
 
@@ -38,8 +38,8 @@ body {
 
 .instagram-continue {
     display: flex;
-    align-items: center; /* horizontal */
-    justify-content: space-around; /* vertical */
+    align-items: center; /*horizontal*/ /*na horizontal por causa do flex-direction: column*/
+    justify-content: space-around; 
     flex-direction: column;
     width: 50%;
     min-height: 34rem;
@@ -48,7 +48,7 @@ body {
 .group {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /*horizontal*/ /*na horizontal por causa do flex-direction: column*/
     flex-direction: column;
     background-color: #ffffff;
     width: 100%;
@@ -64,26 +64,26 @@ body {
     height: 3rem;
 }
 
-.profile-photo {
+.profile-photo{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /*horizontal*/
+    align-items: center;  /*vertical*/
     border-radius: 50%;
-    overflow: hidden;
+    overflow: hidden; /*É usado para não aparecer nada da foto fora da borda*/
 }
 
-.profile-photo img {
+.profile-photo img{
     height: 6rem;
 }
 
-.instagram-login {
+.instagram-login{
     background-color: #0095f6;
     color: #ffffff;
     padding: 8px;
     border-radius: 4px;
 }
 
-.instagram-logout {
+.instagram-logout{
     color: #0095f6;
     margin-top: 1rem;
 }
@@ -96,19 +96,19 @@ body {
     color: #0095f6;
 }
 
-.get-the-app {
+.get-the-app{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /*horizontal*/ /*na horizontal por causa do flex-direction: column*/
+    justify-content: center; /*vertical*/ /*na vertical por causa do flex-direction: column*/
     width: 100%;
-    padding: 1.3rem 0;
+    padding: 1.3rem 0; /*1.3rem em cima e em baixo; 0 nos lados*/
 }
 
 .download {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-evenly; /*mesmo espaço dos lados quanto no meio*/
     align-items: center;
     padding: 1rem;
 }
@@ -116,21 +116,23 @@ body {
 .app-download {
     height: 3rem;
     width: 10rem;
-    background-size: cover;
+    background-size: cover; /*Scale the image, while preserving its intrinsic aspect ratio (if any), to the smallest size such that both its width and its height can completely cover the background positioning area.*/
 }
 
 .app-download:nth-child(1) {
-    background-image: url('./img/apple-button.png');
+/*Represents an element that has an+b-1 siblings before it in the document tree, for any positive integer or zero value of n, and has a parent element.*/
+    background-image: url('./img/apple-button.png');    
 }
 
 .app-download:nth-child(2) {
-    background-image: url('./img/googleplay-button.png');
-}
+    /*Represents an element that has an+b-1 siblings before it in the document tree, for any positive integer or zero value of n, and has a parent element.*/
+        background-image: url('./img/googleplay-button.png');    
+    }
 
 /* media queries */
+/*@media -> Defines a stylesheet for a particular media type.*/
 
-
-@media (max-width: 1024px) {
+@media (max-width: 1024px) { 
     .instagram-wrapper {
         width: 90%;
     }
@@ -152,7 +154,7 @@ body {
     .instagram-continue {
         width: 100%;
     }
-    
+
     .group {
         border: 1px solid transparent;
     }
